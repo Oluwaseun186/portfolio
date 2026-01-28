@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olabode Adewumi| Modern Portfolio</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Olabode Adewumi</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+               <!-- <li><a href="/portfolio">Portfolio</a></li> --> 
+                <!--<li><a href="/skills">Skills</a></li> -->
+                <li><a href="/contact">Contact</a></li>
+                <a href="/register" class="active">Register</a>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Creative <span class="highlight">Software Engineer</span> & <span class="highlight">Technical Writer</span></h1>
+                <p class="hero-subtitle">I craft digital experiences that are beautiful, functional, and user-focused.</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="profile-img"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">My Portfolio</h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="app">App Design</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img" style="background-color: #4a6fa5;"></div>
+                    <div class="portfolio-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Modern online shopping experience with intuitive UX</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-img" style="background-color: #66bb6a;"></div>
+                    <div class="portfolio-info">
+                        <h3>Fitness App UI</h3>
+                        <p>Mobile application for tracking workouts and nutrition</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-img" style="background-color: #ff9800;"></div>
+                    <div class="portfolio-info">
+                        <h3>Cafe Brand Identity</h3>
+                        <p>Complete branding for a specialty coffee shop</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img" style="background-color: #ab47bc;"></div>
+                    <div class="portfolio-info">
+                        <h3>Travel Blog</h3>
+                        <p>Responsive website for a travel content creator</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-img" style="background-color: #26c6da;"></div>
+                    <div class="portfolio-info">
+                        <h3>Finance Dashboard</h3>
+                        <p>Personal finance tracking application</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-img" style="background-color: #ef5350;"></div>
+                    <div class="portfolio-info">
+                        <h3>Tech Startup Logo</h3>
+                        <p>Brand identity for a new technology company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-content">
+                <div class="skills-list">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span class="skill-name">UI/UX Design</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span class="skill-name">Frontend Development</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span class="skill-name">Brand Identity</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span class="skill-name">Motion Design</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-cta">
+                    <h3>Let's work together</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <a href="#contact" class="btn btn-primary">Start a Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Olabode Adewumi. All rights reserved.</p>
+            <p>Designed and developed with pure HTML & CSS</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script src="/script.js"></script>
+</body>
+</html>
