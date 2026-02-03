@@ -1,8 +1,12 @@
 name: Portfolio CI
 
 on:
-  push:
-    branch:  "origin" 
+ push:
+    branches:
+      - main
+pull_request:
+    branches:
+      - main
 
 jobs:
   build:
