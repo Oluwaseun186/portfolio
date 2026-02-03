@@ -21,12 +21,17 @@ jobs:
           node-version: 20
           cache: npm
 
-    
-      - name: Build frontend image
+      
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+
+      - name: Build frontend image.
         run: |
          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/portfolio .
 
-      - name: Set up Docker Buildx
+      - name: Set up Docker Buildx.
         uses: docker/setup-buildx-action@v3
         with:
           install: true
@@ -41,7 +46,7 @@ jobs:
 
       - name: Push frontend image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/jobportal-frontend:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
 
       - name: Build Docker image
         uses: docker/build-push-action@v5
