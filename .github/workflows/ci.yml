@@ -2,7 +2,7 @@ name: Portfolio CI
 
 on:
   push:
-    branches:  "origin" 
+    branch:  "origin" 
 
 jobs:
   build:
