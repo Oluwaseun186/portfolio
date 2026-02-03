@@ -3,8 +3,6 @@ name: portfolio CI
 on:
   push:
     branches: [ "origin" ]
-  pull_request:
-    branches: [ "origin" ]
 
 jobs:
   build:
