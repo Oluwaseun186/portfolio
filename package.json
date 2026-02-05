@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "if [ -d test ] || [ -d __tests__ ]; then npm run test:real; else echo \"No tests\"; fi",
-    "test:real": "jest",
+    "test:real": "npx jest",
     "begin": "nodemon index.js"
   },
   "keywords": [],
