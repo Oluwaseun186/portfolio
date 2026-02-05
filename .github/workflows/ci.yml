@@ -53,7 +53,7 @@ jobs:
           docker run --rm ${{ secrets.DOCKER_USERNAME }}/testing:latest --version
 
 
-  build-and-push:
+  run-and-test:
     runs-on: ubuntu-latest
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -63,13 +63,13 @@ jobs:
 
       - name: Test Docker container
         run: |
-          docker run --rm my-app:${{ github.sha }} npm test
+          docker run --rm testing:${{ github.sha }} npm test
           # Or run integration tests
       
       - name: Run and test container
         run: |
           # Run container in background
-          docker run -d --name test-container -p 4400:4000 my-app:test
+          docker run -d --name test-container -p 4400:4000 testing:test
           
           # Wait for container to start
           sleep 10
