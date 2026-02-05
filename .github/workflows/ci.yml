@@ -68,7 +68,7 @@ jobs:
             
           docker pull ${{ secrets.DOCKER_USERNAME }}/testing:${{ github.sha }} # pull image
 
-          docker run --rm testing:${{ github.sha }} npm test #test container
+          docker run --rm ${{ secrets.DOCKER_USERNAME }}/testing:${{ github.sha }} npm test #test container
           
           docker run -d --name test-container -p 4400:4000 testing:latest # run container
           
