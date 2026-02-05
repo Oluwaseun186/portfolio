@@ -70,7 +70,7 @@ jobs:
 
           docker run --rm ${{ secrets.DOCKER_USERNAME }}/testing:${{ github.sha }} npm test #test container
           
-          docker run -d --name test-container -p 4400:4000 testing:latest # run container
+          docker run -d --name test-container -p 4400:4000 ${{ secrets.DOCKER_USERNAME }}/testing:${{ github.sha }} #run container
           
           # Wait for container to start
           sleep 10
