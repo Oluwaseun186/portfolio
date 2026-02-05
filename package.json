@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "if [ -d test ] || [ -d __tests__ ]; then npm run test:real; else echo \"No tests\"; fi",
+    "test:real": "jest",
     "begin": "nodemon index.js"
   },
   "keywords": [],
@@ -17,6 +18,7 @@
     "mongodb": "^7.0.0"
   },
   "devDependencies": {
+    "jest": "^30.2.0",
     "nodemon": "^3.1.11"
   }
 }
